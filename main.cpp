@@ -1,3 +1,10 @@
+//============================================================================
+// Name        : main.cpp
+// Author      : Alejandro Fernández Camello
+// Version     : 1.0
+// Copyright   : GPL-3.0
+// Description : Implementation for solving the n-queens problem for a n <= 31
+//============================================================================
 #include <iostream>
 #include <fstream>
 #include <ctime>
