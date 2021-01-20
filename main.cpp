@@ -5,11 +5,12 @@
 // Copyright   : GPL-3.0
 // Description : Implementation for solving the n-queens problem for a n <= 31
 //============================================================================
+
 #include <iostream>
 #include <fstream>
 #include <ctime>
 
-#define clz(x) __builtin_clz(x)
+#define clz(x) __builtin_clzll(x)
 
 using namespace std;
 
@@ -21,7 +22,7 @@ int *sol;
 bool found,onlySolution,chessboard;
 
 ull log2(ull n){
-	return 31-clz(n);
+	return 63-clz(n);
 }
 
 
@@ -89,7 +90,7 @@ void solveR(ull rows,ull leftDia,ull rightDia,unsigned int col,ostream &stream){
 }
 
 void solve(ostream &stream){
-	allTrue = (1 << n) - 1;
+	allTrue = (1ULL << n) - 1ULL;
 	sol = new int[n];
 	found = false;
 	solveR(0,0,0,0,stream);
